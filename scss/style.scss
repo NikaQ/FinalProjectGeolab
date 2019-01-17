@@ -3,32 +3,36 @@
 @import 'reset.scss';
 @import 'mixins.scss';
 
+*{
+    scroll-behavior: smooth;
+}
+
 main{
     .header-section{
         background-image: url('../images/background01.png');
-        background-repeat: no-repeat;
         background-size: cover;
-        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
         header{
             nav{
-                .white{
+                .navbar-toggler{
                     color:$white;
                 }
                 .navbar-nav{
                     font-family: $work-sans-semiBold;
-                   a{ 
-                       color:$white;
-                   }
-                   a:hover{
+                    a{ 
+                        color:$white;
+                    }
+                    a:hover{
                         background-color:white;
-                        color:aqua;
+                        color:$button-background-color;
                         border-radius: 5px;
-                   }
+                    }
                 }
             }
         }
         .flex-section{
-            @include flex-column(flex,center,center,column);
+            @include flex(flex,center,center,column);
             margin-top: 150px;
             h1{
                 @include font($work-sans-semiBold,45px,$white);
@@ -44,7 +48,7 @@ main{
             .home-buttons{
                 margin-top: 45px;
                 .btn-light{
-                    @include font($work-sans-semiBold,14px,$black);
+                    @include font($work-sans-semiBold,14px,$text-color);
                     width: 167px;
                     margin-right: 25px;
                     border-radius: 10px;
@@ -58,6 +62,306 @@ main{
             }
             .home-phone{
                 margin-top: 75px;
+            }
+        }
+    }
+
+
+    .about-section{
+        .about-image{
+            z-index: 1;
+            position: absolute;
+            top:855px;
+            left: 0;
+            
+            img{
+                width: 100%;
+                height:1250px;
+            }
+        }
+
+        .about-first-component{
+            position: relative;
+            z-index: 3;
+            display: flex;
+            justify-content: flex-start;
+            .about-phone-image{
+                margin-left: 50px;
+                margin-top: 200px;
+                margin-right: 100px;
+            }
+            .box-containers{
+                .row{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+                #box1{
+                    margin-left:70px;
+                    margin-top:25px;
+                }
+                #box2{
+                    margin-top:100px
+                }
+                #box3{
+                    margin-top: -20px;
+                }
+                #box4{
+                    margin-top:100px;
+                }
+                .box{
+                    @include flex(flex,center,center,column);
+                    width: 270px;
+                    box-shadow: 0px 6px 10px 3px #E7E8EA ;
+                    border-radius:3px;
+                    margin-right: 60px;
+                    padding: 60px 0 40px 0;
+                    .box-text{
+                        text-align: center;
+                        width: 215px;
+                        
+                        h4{
+                            @include font($work-sans-semiBold,14px,$text-color);
+                            margin:35px 0 30px 0;
+                        }
+                        p{
+                            @include font($work-sans-regular,14px,$about-text);
+                            line-height: 1.4;
+                        }
+                    }
+                } 
+            }
+        }
+        .about-second-component{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 250px;
+            .stable{
+                width: 480px;
+                text-align: right;
+                margin-right: 145px;
+                margin-top: 100px;
+                h1{
+                    @include font($work-sans-bold,30px,$text-color);
+                    margin-bottom: 55px;
+                }
+                p{
+                    @include font($work-sans-regular,14px,$about-text);
+                    line-height: 1.6;
+                    margin-bottom: 35px;
+                }
+                .btn-primary{
+                    @include font($work-sans-semiBold,15px,$white);
+                    width: 200px;
+                    height: 50px;
+                    background-color:$button-background-color;
+                    border: none;
+                    border-radius:3px;
+                    padding-top:14px;
+                }
+                .btn-primary:hover{
+                    //dasaweri
+                }
+            }
+            .second-box{
+                @include flex(flex,center,center,column);
+                margin-bottom: 90px;
+                .second-box-content{
+                    box-shadow: 0px 6px 10px 3px #E7E8EA ;
+                    width: 540px;
+                    padding: 27px 0 27px 30px;
+                    margin-bottom: 20px;
+                    transition:all 0.3s ease-in-out;
+                    .block{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                        img{
+                            margin-right: 20px;
+                        }
+                        p{
+                            @include font($work-sans-semiBold,15px,$text-color);
+                            margin-top:14px;
+                        }
+                    }
+                    .description{
+                        width: 360px;
+                        margin-left: 40px;
+                        display: none;
+                        @include font($work-sans-regular,14px,$white);
+                    }
+                }
+                .second-box-content:hover{
+                    background-color:$button-background-color;
+                    .description{
+                        display: block;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .portfolio-section{
+        .portfolio-first-component{
+            background-color:$portfolio-background-color;
+            .container{
+                @include flex(flex,space-between,center,row);
+                .portfolio-code-image{
+                    margin-top: 70px;
+                    margin-bottom: 80px;
+                }
+                .everything-you-need{
+                    margin-top:70px;
+                    margin-bottom: 80px;
+                    @include flex(flex,center,flex-start,column);
+                    .title{
+                        @include font($work-sans-bold,30px,$text-color);
+                        margin-bottom: 30px;
+                    }
+                    .checked{
+                        display: flex;
+                        align-items: center;
+                        img{
+                            margin-right: 20px;
+                        }
+                        p{
+                            margin-top: 10px;
+                            @include font($work-sans-semiBold,15px,$text-color);
+                        }
+                    }
+                    .text{
+                        margin-top: 30px;
+                        @include font($work-sans-regular,14px,$about-text);
+                        width: 460px;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+        .portfolio-second-component{
+            background-image: url('../images/background01.png');
+            background-position: center center;
+            background-size: cover;
+            padding: 96px;
+            .container{
+                @include flex(flex,space-between,flex-start,row);
+                .portfolio-phone-image{
+                    margin-left:180px;
+                    margin-top:110px;
+                }
+                .now-available{
+                    margin-left:160px;
+                    margin-top:275px;
+                    .title{
+                        @include font($work-sans-bold,30px,$text-color);
+                        margin-bottom: 30px;
+                    }
+                    .description{
+                        @include font($work-sans-regular,14px,$white);
+                        width: 470px;
+                        line-height: 1.9;
+                        margin-bottom: 10px;
+                    }
+                    .get-it-on{
+                        @include flex(flex,flex-start,center,row);
+                        .app-store{
+                            margin-right: 40px;
+                        }
+                    }
+                }
+            }
+            .button-get-app{
+                position: relative;                
+                a{
+                    @include font($work-sans-bold,20px,$white);
+                    position: absolute;
+                    transform: translate(50%,50%);
+                    left:250px;
+                    top:5px;
+                    background-image:linear-gradient($button-gradient-start,$button-gradient-end);
+                    padding: 30px 75px 25px 90px;       
+                }
+            }
+        }
+    }
+
+    .contact-section{
+        @include flex(flex,center,center,column);
+        padding-top:145px;
+        padding-bottom: 85px;
+        .contact-first-component{
+            @include flex(flex,flex-start,flex-start,row);
+            margin-bottom: 85px;
+            .contact-list{
+                margin-right: 130px;
+                
+                h1{
+                    @include font($work-sans-semiBold,15px,$text-color);
+                    margin-bottom: 30px;
+                }
+                li{
+                    margin-bottom: 20px;
+                    a{
+                        @include font($work-sans-regular,14px,$about-text);
+                    }
+                    a:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .contact-list:first-child{
+                margin-left:180px;
+            }
+            .contact-list:last-child{
+                margin-right: 0;
+            }
+            
+        }
+        .contact-second-component{
+            @include flex(flex,center,center,column);
+            .title{
+                @include font($work-sans-semiBold,30px,$text-color);
+                margin-bottom: 35px;
+            }
+            .description{
+                @include font($work-sans-regular,14px,$about-text);
+                margin-bottom: 75px;
+            }
+            input{
+                width: 565px;
+                height: 50px;
+                background-color: $about-text;
+                border: none;
+                margin-right: 30px;
+            }
+            .count-me-in{
+                @include font($work-sans-semiBold,15px,$text-color);
+                background-color: $submit-button-color;
+                width: 170px;
+                height: 50px;
+                border: none;
+            }
+            
+        }
+    }
+
+    footer{
+        padding:45px 0;
+        background-color:$text-color;
+        .div-footer{
+            @include flex(flex,space-between,center,row);
+            p{
+                @include font($work-sans-regular,14px,$white);
+            }
+            a{
+                font-size: 24px;
+                margin-left: 30px;
+                color:$white;
+            }
+            a:hover{
+                color: $submit-button-color;
             }
         }
     }

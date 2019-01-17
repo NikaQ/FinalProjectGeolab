@@ -1,8 +1,9 @@
-@mixin flex-column($flex,$content,$items,$direction){
+@mixin flex($flex,$content,$items,$direction,$wrap){
     display:$flex;
     justify-content: $content;
     align-items: $items;
-    flex-direction: $direction
+    flex-direction: $direction;
+    flex-wrap:$wrap;
 }
 @mixin font($family,$size,$color){
     font-family: $family;
