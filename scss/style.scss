@@ -22,11 +22,11 @@ main{
                     font-family: $work-sans-semiBold;
                     a{ 
                         color:$white;
+                        transition: all 0.3s ease-in-out;
+                        margin-right: 50px;
                     }
-                    a:hover{
-                        background-color:white;
-                        color:$button-background-color;
-                        border-radius: 5px;
+                    .hvr-underline-from-center:before {
+                        background: $white;
                     }
                 }
             }
@@ -59,6 +59,9 @@ main{
                     border:1px solid $white;
                     border-radius: 10px;
                 }
+                .btn-link:hover{
+                    text-decoration: none;
+                }
             }
             .home-phone{
                 margin-top: 75px;
@@ -73,32 +76,25 @@ main{
             position: absolute;
             top:855px;
             left: 0;
-            
             img{
                 width: 100%;
-                height:1250px;
+                height: 1250px;
             }
         }
 
         .about-first-component{
             position: relative;
             z-index: 3;
-            display: flex;
-            justify-content: flex-start;
+            @include flex(flex,flex-start,flex-start,row);
             .about-phone-image{
-                margin-left: 50px;
-                margin-top: 200px;
-                margin-right: 100px;
+                margin:200px 100px 0 50px;
             }
             .box-containers{
                 .row{
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: flex-start;
+                    @include flex(flex,flex-start,flex-start,row);
                 }
                 #box1{
-                    margin-left:70px;
-                    margin-top:25px;
+                    margin:25px 60px 0 70px;
                 }
                 #box2{
                     margin-top:100px
@@ -133,15 +129,12 @@ main{
             }
         }
         .about-second-component{
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            @include flex(flex,space-between,flex-start,row);
             margin-top: 250px;
             .stable{
                 width: 480px;
                 text-align: right;
-                margin-right: 145px;
-                margin-top: 100px;
+                margin:100px 145px 0 0;
                 h1{
                     @include font($work-sans-bold,30px,$text-color);
                     margin-bottom: 55px;
@@ -160,9 +153,6 @@ main{
                     border-radius:3px;
                     padding-top:14px;
                 }
-                .btn-primary:hover{
-                    //dasaweri
-                }
             }
             .second-box{
                 @include flex(flex,center,center,column);
@@ -174,9 +164,7 @@ main{
                     margin-bottom: 20px;
                     transition:all 0.3s ease-in-out;
                     .block{
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
+                    @include flex(flex,flex-start,center,row);
                         img{
                             margin-right: 20px;
                         }
@@ -187,10 +175,13 @@ main{
                     }
                     .description{
                         width: 360px;
-                        margin-left: 40px;
+                        margin:20px 0 0 40px;
                         display: none;
                         @include font($work-sans-regular,14px,$white);
                     }
+                }
+                .hvr-back-pulse:hover:before,hvr-sweep-to-bottom:hover{
+                    background-color:$button-background-color;
                 }
                 .second-box-content:hover{
                     background-color:$button-background-color;
@@ -209,25 +200,22 @@ main{
             .container{
                 @include flex(flex,space-between,center,row);
                 .portfolio-code-image{
-                    margin-top: 70px;
-                    margin-bottom: 80px;
+                    margin:70px 0 80px 0;
                 }
                 .everything-you-need{
-                    margin-top:70px;
-                    margin-bottom: 80px;
+                    margin:70px 0 80px 0;
                     @include flex(flex,center,flex-start,column);
                     .title{
                         @include font($work-sans-bold,30px,$text-color);
                         margin-bottom: 30px;
                     }
                     .checked{
-                        display: flex;
-                        align-items: center;
+                        @include flex(flex,flex-start,flex-start,row);
+                        margin-top:20px;
                         img{
                             margin-right: 20px;
                         }
                         p{
-                            margin-top: 10px;
                             @include font($work-sans-semiBold,15px,$text-color);
                         }
                     }
@@ -248,12 +236,10 @@ main{
             .container{
                 @include flex(flex,space-between,flex-start,row);
                 .portfolio-phone-image{
-                    margin-left:180px;
-                    margin-top:110px;
+                    margin:110px 0 0 180px;
                 }
                 .now-available{
-                    margin-left:160px;
-                    margin-top:275px;
+                    margin:275px 0 0 160px;
                     .title{
                         @include font($work-sans-bold,30px,$text-color);
                         margin-bottom: 30px;
@@ -262,7 +248,7 @@ main{
                         @include font($work-sans-regular,14px,$white);
                         width: 470px;
                         line-height: 1.9;
-                        margin-bottom: 10px;
+                        margin-bottom: 30px;
                     }
                     .get-it-on{
                         @include flex(flex,flex-start,center,row);
@@ -279,7 +265,8 @@ main{
                     position: absolute;
                     transform: translate(50%,50%);
                     left:250px;
-                    top:5px;
+                    top:25px;
+                    width: 370px;
                     background-image:linear-gradient($button-gradient-start,$button-gradient-end);
                     padding: 30px 75px 25px 90px;       
                 }
@@ -289,14 +276,12 @@ main{
 
     .contact-section{
         @include flex(flex,center,center,column);
-        padding-top:145px;
-        padding-bottom: 85px;
+        padding:145px 0 85px 0;
         .contact-first-component{
             @include flex(flex,flex-start,flex-start,row);
             margin-bottom: 85px;
             .contact-list{
                 margin-right: 130px;
-                
                 h1{
                     @include font($work-sans-semiBold,15px,$text-color);
                     margin-bottom: 30px;
@@ -332,7 +317,7 @@ main{
             input{
                 width: 565px;
                 height: 50px;
-                background-color: $about-text;
+                background-color: $input-color;
                 border: none;
                 margin-right: 30px;
             }
@@ -342,6 +327,7 @@ main{
                 width: 170px;
                 height: 50px;
                 border: none;
+                cursor: pointer;
             }
             
         }
@@ -362,6 +348,7 @@ main{
             }
             a:hover{
                 color: $submit-button-color;
+                
             }
         }
     }
