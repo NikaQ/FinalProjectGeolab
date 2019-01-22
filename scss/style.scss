@@ -76,9 +76,11 @@ main{
             position: absolute;
             top:855px;
             left: 0;
+            height: 1250px;
+            width: 100%;
             img{
                 width: 100%;
-                height: 1250px;
+                height: 100%;
             }
         }
 
@@ -232,6 +234,7 @@ main{
             background-image: url('../images/background01.png');
             background-position: center center;
             background-size: cover;
+            background-repeat: no-repeat;
             padding: 96px;
             .container{
                 @include flex(flex,space-between,flex-start,row);
@@ -320,6 +323,8 @@ main{
                 background-color: $input-color;
                 border: none;
                 margin-right: 30px;
+                padding:25px;
+                @include font($work-sans-regular,15px,$button-background-color);
             }
             .count-me-in{
                 @include font($work-sans-semiBold,15px,$text-color);
@@ -349,6 +354,242 @@ main{
             a:hover{
                 color: $submit-button-color;
                 
+            }
+        }
+    }
+}
+@media only screen and (max-width:1200px){
+    main{
+        .about-section{
+            .about-image{
+                height: 2100px;
+                top:760px;
+            }
+            .about-first-component{
+                
+                @include flex(flex,center,center,column);
+                .box-containers{
+                    margin-top: 0px;
+                }
+                
+            }
+            .about-second-component{
+                margin-bottom: 40px;
+            }
+        }
+        .portfolio-section{
+            .portfolio-first-component{
+                .container{
+                    @include flex(flex,center,center,column);
+                    flex-wrap: wrap;
+                }
+            }
+            .portfolio-second-component{
+                background-position: top left;
+                .container{
+                    @include flex(flex,center,center,column);
+                    .portfolio-phone-image{
+                        margin:10px 0 0 0;
+                    }
+                    .now-available{
+                        margin:70px 0 0 0;
+
+                        text-align: center;
+                        .get-it-on{
+                            .app-store{
+                                margin-right: 100px;
+                            }
+                        }
+                    }
+                } 
+                .button-get-app{            
+                    a{
+                        left:80px;
+                        top:25px; 
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:991px){
+    main{
+        .about-section{
+            .about-image{
+                height:3000px ;
+                top:600px;
+            }
+            .about-first-component{
+                .box-containers{
+                    #box1,#box2,#box3,#box4{
+                        margin-left: 195px;
+                    }
+                    #box3{
+                        margin-top: 100px
+                    }
+                }
+            }
+            .about-second-component{
+                @include flex(flex,center,center,column);
+                .stable{
+                    margin:0 0 0 85px;
+                    text-align: center;
+                }
+                .second-box{
+                    margin-top: 90px;
+                }
+            }
+        }
+        .contact-section{
+            .contact-first-component{
+                flex-wrap: wrap;
+                .contact-list:nth-child(3){
+                    margin:70px 0 0 185px;
+                }
+                .contact-list:nth-child(4){
+                    margin-top: 70px;
+                }
+                .contact-list:nth-child(2){
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:785px){
+    main{
+        .about-section{
+            .about-second-component{
+                .stable{
+                    margin-left: 0;
+                }
+            }
+        }
+        .contact-section{
+            .contact-second-component{
+                form{
+                    @include flex(flex,center,center,column);
+                    .count-me-in{
+                        margin-top:30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:767px){
+    main{
+        .about-section{
+            .about-image{
+                height:3000px ;
+                top:600px;
+            }
+            .about-first-component{
+                .box-containers{
+                    #box1,#box2,#box3,#box4{
+                        margin-left: 100px;
+                    }
+                    #box3{
+                        margin-top: 100px
+                    }
+                }
+            }
+        }
+        .portfolio-section{
+            .portfolio-second-component{
+                .button-get-app{
+                    a{
+                        transform: translate(0, 50%);
+                    }
+                }
+            }
+        }
+        .contact-section{
+            .contact-first-component{
+                flex-wrap: wrap;
+                .contact-list:first-child{
+                    margin-left: 200px;
+                }
+                .contact-list:nth-child(2),.contact-list:nth-child(3),.contact-list:nth-child(4){
+                    margin-left: 200px;
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:576px){
+    main{
+        .container{
+            padding-left: 5px;
+        }
+        .header-section{
+            .flex-section{
+                h1{
+                    width: 450px;
+                }
+            }
+        }
+        .about-section{
+            .about-second-component{
+                .stable{
+                    width: 400px;
+                    margin-left: 20px;
+                }
+                .second-box{
+                    .second-box-content{
+                        width: 450px;
+                    }
+                }
+            }
+        }
+        .portfolio-section{
+            .portfolio-first-component{
+                .container{
+                    .portfolio-code-image{
+                        img{
+                            width: 500px;
+                        }
+                    }
+                }
+            }
+            .portfolio-second-component{
+                .button-get-app{
+                    a{
+                        transform: translate(-25%, 50%);
+                    }
+                }
+            }
+        }
+        .contact-section{
+            .contact-second-component{
+                input{
+                    width: 450px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:500px){
+    main{
+        .portfolio-section{
+            .portfolio-first-component{
+                .everything-you-need{
+                    width: 400px;
+                    margin-left: 0;
+                    p{
+                        width: 300px
+                    }
+                }
+            }
+        }   
+        .contact-section{
+            .contact-second-component{
+                input{
+                    width: 300px;
+                }
             }
         }
     }
