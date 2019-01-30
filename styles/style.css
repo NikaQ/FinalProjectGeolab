@@ -527,24 +527,6 @@ main .portfolio-section .portfolio-second-component {
         flex-direction: row; }
         main .portfolio-section .portfolio-second-component .container .now-available .get-it-on .app-store {
           margin-right: 40px; }
-  main .portfolio-section .portfolio-second-component .button-get-app {
-    position: relative; }
-    main .portfolio-section .portfolio-second-component .button-get-app a {
-      font-family: "Work sans Bold", sans-serif;
-      font-size: 20px;
-      color: #FFFFFF;
-      position: absolute;
-      -webkit-transform: translate(50%, 50%);
-      -ms-transform: translate(50%, 50%);
-      transform: translate(50%, 50%);
-      left: 250px;
-      top: 25px;
-      width: 370px;
-      background-image: -webkit-gradient(linear, left top, left bottom, from(#fD7873), to(#fE367E));
-      background-image: -webkit-linear-gradient(#fD7873, #fE367E);
-      background-image: -o-linear-gradient(#fD7873, #fE367E);
-      background-image: linear-gradient(#fD7873, #fE367E);
-      padding: 30px 75px 25px 90px; }
 
 main .contact-section {
   display: -webkit-box;
@@ -565,44 +547,34 @@ main .contact-section {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 145px 0 85px 0; }
+  main .contact-section .button-get-app {
+    margin-top: -160px;
+    margin-bottom: 130px; }
+    main .contact-section .button-get-app a {
+      font-family: "Work sans Bold", sans-serif;
+      font-size: 20px;
+      color: #FFFFFF;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#fD7873), to(#fE367E));
+      background-image: -webkit-linear-gradient(#fD7873, #fE367E);
+      background-image: -o-linear-gradient(#fD7873, #fE367E);
+      background-image: linear-gradient(#fD7873, #fE367E);
+      padding: 30px 75px;
+      width: 370px; }
   main .contact-section .contact-first-component {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
     margin-bottom: 85px; }
-    main .contact-section .contact-first-component .contact-list {
-      margin-right: 130px; }
-      main .contact-section .contact-first-component .contact-list h1 {
-        font-family: "Work sans SemiBold", sans-serif;
-        font-size: 15px;
-        color: #233148;
-        margin-bottom: 30px; }
-      main .contact-section .contact-first-component .contact-list li {
-        margin-bottom: 20px; }
-        main .contact-section .contact-first-component .contact-list li a {
-          font-family: "Work sans", sans-serif;
-          font-size: 14px;
-          color: #6A6D89; }
-        main .contact-section .contact-first-component .contact-list li a:hover {
-          text-decoration: underline; }
-    main .contact-section .contact-first-component .contact-list:first-child {
-      margin-left: 180px; }
-    main .contact-section .contact-first-component .contact-list:last-child {
-      margin-right: 0; }
+    main .contact-section .contact-first-component .contact-list h1 {
+      font-family: "Work sans SemiBold", sans-serif;
+      font-size: 15px;
+      color: #233148;
+      margin-bottom: 30px; }
+    main .contact-section .contact-first-component .contact-list li {
+      margin-bottom: 20px; }
+      main .contact-section .contact-first-component .contact-list li a {
+        font-family: "Work sans", sans-serif;
+        font-size: 14px;
+        color: #6A6D89; }
+      main .contact-section .contact-first-component .contact-list li a:hover {
+        text-decoration: underline; }
   main .contact-section .contact-second-component {
     display: -webkit-box;
     display: -webkit-flex;
@@ -756,10 +728,7 @@ main footer {
         margin: 70px 0 0 0;
         text-align: center; }
         main .portfolio-section .portfolio-second-component .container .now-available .get-it-on .app-store {
-          margin-right: 100px; }
-    main .portfolio-section .portfolio-second-component .button-get-app a {
-      left: 80px;
-      top: 25px; } }
+          margin-right: 100px; } }
 
 @media only screen and (max-width: 991px) {
   main .about-section .about-image {
@@ -792,16 +761,12 @@ main footer {
       text-align: center; }
     main .about-section .about-second-component .second-box {
       margin-top: 90px; }
-  main .contact-section .contact-first-component {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
-    main .contact-section .contact-first-component .contact-list:nth-child(3) {
-      margin: 70px 0 0 185px; }
-    main .contact-section .contact-first-component .contact-list:nth-child(4) {
-      margin-top: 70px; }
-    main .contact-section .contact-first-component .contact-list:nth-child(2) {
-      margin-left: 20px; } }
+  main .portfolio-section .portfolio-second-component .container .button-get-app a {
+    margin-left: -120px; }
+  main .contact-section {
+    padding-left: 200px; }
+    main .contact-section .contact-first-component .contact-list:nth-child(3), main .contact-section .contact-first-component .contact-list:nth-child(4) {
+      margin-top: 20px; } }
 
 @media only screen and (max-width: 785px) {
   main .about-section .about-second-component .stable {
@@ -826,28 +791,6 @@ main footer {
     flex-direction: column; }
     main .contact-section .contact-second-component form .count-me-in {
       margin-top: 30px; } }
-
-@media only screen and (max-width: 767px) {
-  main .about-section .about-image {
-    height: 3000px;
-    top: 600px; }
-  main .about-section .about-first-component .box-containers #box1, main .about-section .about-first-component .box-containers #box2, main .about-section .about-first-component .box-containers #box3, main .about-section .about-first-component .box-containers #box4 {
-    margin-left: 100px; }
-  main .about-section .about-first-component .box-containers #box3 {
-    margin-top: 100px; }
-  main .portfolio-section .portfolio-second-component .button-get-app a {
-    -webkit-transform: translate(0, 50%);
-    -ms-transform: translate(0, 50%);
-    transform: translate(0, 50%); }
-  main .contact-section .contact-first-component {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; }
-    main .contact-section .contact-first-component .contact-list:first-child {
-      margin-left: 200px; }
-    main .contact-section .contact-first-component .contact-list:nth-child(2), main .contact-section .contact-first-component .contact-list:nth-child(3), main .contact-section .contact-first-component .contact-list:nth-child(4) {
-      margin-left: 200px;
-      margin-top: 50px; } }
 
 @media only screen and (max-width: 576px) {
   main .container {

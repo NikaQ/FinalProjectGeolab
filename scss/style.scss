@@ -261,30 +261,27 @@ main{
                     }
                 }
             }
-            .button-get-app{
-                position: relative;                
-                a{
-                    @include font($work-sans-bold,20px,$white);
-                    position: absolute;
-                    transform: translate(50%,50%);
-                    left:250px;
-                    top:25px;
-                    width: 370px;
-                    background-image:linear-gradient($button-gradient-start,$button-gradient-end);
-                    padding: 30px 75px 25px 90px;       
-                }
-            }
         }
     }
 
     .contact-section{
         @include flex(flex,center,center,column);
         padding:145px 0 85px 0;
+        .button-get-app{
+            margin-top: -160px;
+            margin-bottom: 130px;
+            a{
+                @include font($work-sans-bold,20px,$white);
+                background-image:linear-gradient($button-gradient-start,$button-gradient-end);
+                padding: 30px 75px;
+                width: 370px;
+            }
+        }
         .contact-first-component{
-            @include flex(flex,flex-start,flex-start,row);
+            // @include flex(flex,center,flex-start,row);
             margin-bottom: 85px;
             .contact-list{
-                margin-right: 130px;
+                // margin-right: 130px;
                 h1{
                     @include font($work-sans-semiBold,15px,$text-color);
                     margin-bottom: 30px;
@@ -298,12 +295,6 @@ main{
                         text-decoration: underline;
                     }
                 }
-            }
-            .contact-list:first-child{
-                margin-left:180px;
-            }
-            .contact-list:last-child{
-                margin-right: 0;
             }
             
         }
@@ -353,7 +344,6 @@ main{
             }
             a:hover{
                 color: $submit-button-color;
-                
             }
         }
     }
@@ -402,12 +392,6 @@ main{
                         }
                     }
                 } 
-                .button-get-app{            
-                    a{
-                        left:80px;
-                        top:25px; 
-                    }
-                }
             }
         }
     }
@@ -418,14 +402,14 @@ main{
             .about-image{
                 height:3000px ;
                 top:600px;
-            }
+            }   
             .about-first-component{
                 .box-containers{
                     #box1,#box2,#box3,#box4{
                         margin-left: 195px;
                     }
                     #box3{
-                        margin-top: 100px
+                        margin-top: 100px;
                     }
                 }
             }
@@ -440,17 +424,22 @@ main{
                 }
             }
         }
+        .portfolio-section{
+            .portfolio-second-component{
+               .container{
+                    .button-get-app{
+                        a{
+                            margin-left:-120px;
+                        }    
+                    }
+                }
+            }
+        }
         .contact-section{
+            padding-left: 200px;
             .contact-first-component{
-                flex-wrap: wrap;
-                .contact-list:nth-child(3){
-                    margin:70px 0 0 185px;
-                }
-                .contact-list:nth-child(4){
-                    margin-top: 70px;
-                }
-                .contact-list:nth-child(2){
-                    margin-left: 20px;
+                .contact-list:nth-child(3),.contact-list:nth-child(4){
+                    margin-top: 20px;
                 }
             }
         }
@@ -479,47 +468,47 @@ main{
     }
 }
 
-@media only screen and (max-width:767px){
-    main{
-        .about-section{
-            .about-image{
-                height:3000px ;
-                top:600px;
-            }
-            .about-first-component{
-                .box-containers{
-                    #box1,#box2,#box3,#box4{
-                        margin-left: 100px;
-                    }
-                    #box3{
-                        margin-top: 100px
-                    }
-                }
-            }
-        }
-        .portfolio-section{
-            .portfolio-second-component{
-                .button-get-app{
-                    a{
-                        transform: translate(0, 50%);
-                    }
-                }
-            }
-        }
-        .contact-section{
-            .contact-first-component{
-                flex-wrap: wrap;
-                .contact-list:first-child{
-                    margin-left: 200px;
-                }
-                .contact-list:nth-child(2),.contact-list:nth-child(3),.contact-list:nth-child(4){
-                    margin-left: 200px;
-                    margin-top: 50px;
-                }
-            }
-        }
-    }
-}
+// @media only screen and (max-width:767px){
+//     main{
+//         .about-section{
+//             .about-image{
+//                 height:3000px ;
+//                 top:600px;
+//             }
+//             .about-first-component{
+//                 .box-containers{
+//                     #box1,#box2,#box3,#box4{
+//                         margin-left: 100px;
+//                     }
+//                     #box3{
+//                         margin-top: 100px
+//                     }
+//                 }
+//             }
+//         }
+//         .portfolio-section{
+//             .portfolio-second-component{
+//                 .button-get-app{
+//                     a{
+//                         transform: translate(0, 50%);
+//                     }
+//                 }
+//             }
+//         }
+//         .contact-section{
+//             .contact-first-component{
+//                 flex-wrap: wrap;
+//                 .contact-list:first-child{
+//                     margin-left: 200px;
+//                 }
+//                 .contact-list:nth-child(2),.contact-list:nth-child(3),.contact-list:nth-child(4){
+//                     margin-left: 200px;
+//                     margin-top: 50px;
+//                 }
+//             }
+//         }
+//     }
+// }
 @media only screen and (max-width:576px){
     main{
         .container{
