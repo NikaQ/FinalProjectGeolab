@@ -276,6 +276,7 @@ main .about-section .about-first-component {
         line-height: 1.4; }
 
 main .about-section .about-second-component {
+  height: 600px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -548,7 +549,8 @@ main .contact-section {
   flex-direction: column;
   padding: 145px 0 85px 0; }
   main .contact-section .button-get-app {
-    margin-top: -160px;
+    margin-top: -190px;
+    margin-left: -50px;
     margin-bottom: 130px; }
     main .contact-section .button-get-app a {
       font-family: "Work sans Bold", sans-serif;
@@ -681,6 +683,54 @@ main footer {
       margin-top: 0px; }
   main .about-section .about-second-component {
     margin-bottom: 40px; }
+  main .portfolio-section .portfolio-first-component .portfolio-code-image img {
+    width: 450px; }
+  main .portfolio-section .portfolio-second-component {
+    background-position: top left; }
+    main .portfolio-section .portfolio-second-component .container .portfolio-phone-image {
+      margin: 10px 0 0 0; }
+    main .portfolio-section .portfolio-second-component .container .now-available {
+      margin: 70px 0 0 0;
+      text-align: center; }
+      main .portfolio-section .portfolio-second-component .container .now-available .get-it-on .app-store {
+        margin-right: 100px; } }
+
+@media only screen and (max-width: 991px) {
+  main .about-section .about-image {
+    height: 2900px;
+    top: 600px; }
+  main .about-section .about-first-component .about-phone-image {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 90px; }
+  main .about-section .about-first-component .box-containers #box1, main .about-section .about-first-component .box-containers #box2, main .about-section .about-first-component .box-containers #box3, main .about-section .about-first-component .box-containers #box4 {
+    margin-left: 215px; }
+  main .about-section .about-first-component .box-containers #box3 {
+    margin-top: 100px; }
+  main .about-section .about-second-component {
+    height: 1000px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    main .about-section .about-second-component .stable {
+      margin: 0 auto;
+      text-align: center; }
+    main .about-section .about-second-component .second-box {
+      margin-top: 90px; }
   main .portfolio-section .portfolio-first-component .container {
     display: -webkit-box;
     display: -webkit-flex;
@@ -702,43 +752,12 @@ main footer {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-  main .portfolio-section .portfolio-second-component {
-    background-position: top left; }
-    main .portfolio-section .portfolio-second-component .container {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column; }
-      main .portfolio-section .portfolio-second-component .container .portfolio-phone-image {
-        margin: 10px 0 0 0; }
-      main .portfolio-section .portfolio-second-component .container .now-available {
-        margin: 70px 0 0 0;
-        text-align: center; }
-        main .portfolio-section .portfolio-second-component .container .now-available .get-it-on .app-store {
-          margin-right: 100px; } }
-
-@media only screen and (max-width: 991px) {
-  main .about-section .about-image {
-    height: 3000px;
-    top: 600px; }
-  main .about-section .about-first-component .box-containers #box1, main .about-section .about-first-component .box-containers #box2, main .about-section .about-first-component .box-containers #box3, main .about-section .about-first-component .box-containers #box4 {
-    margin-left: 195px; }
-  main .about-section .about-first-component .box-containers #box3 {
-    margin-top: 100px; }
-  main .about-section .about-second-component {
+    main .portfolio-section .portfolio-first-component .container .portfolio-code-image {
+      margin-bottom: 0px; }
+    main .portfolio-section .portfolio-first-component .container .everything-you-need {
+      margin-top: 30px;
+      margin-left: 50px; }
+  main .portfolio-section .portfolio-second-component .container {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -756,21 +775,32 @@ main footer {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
-    main .about-section .about-second-component .stable {
-      margin: 0 0 0 85px;
-      text-align: center; }
-    main .about-section .about-second-component .second-box {
-      margin-top: 90px; }
-  main .portfolio-section .portfolio-second-component .container .button-get-app a {
-    margin-left: -120px; }
-  main .contact-section {
+    main .portfolio-section .portfolio-second-component .container .button-get-app a {
+      margin-left: -120px; }
+  main .contact-section .contact-first-component {
     padding-left: 200px; }
     main .contact-section .contact-first-component .contact-list:nth-child(3), main .contact-section .contact-first-component .contact-list:nth-child(4) {
-      margin-top: 20px; } }
+      margin-top: 20px; }
+  main .contact-section .contact-second-component .input {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
 
 @media only screen and (max-width: 785px) {
-  main .about-section .about-second-component .stable {
-    margin-left: 0; }
   main .contact-section .contact-second-component form {
     display: -webkit-box;
     display: -webkit-flex;
@@ -792,6 +822,36 @@ main footer {
     main .contact-section .contact-second-component form .count-me-in {
       margin-top: 30px; } }
 
+@media only screen and (max-width: 767px) {
+  main .about-section .about-first-component .box-containers #box1, main .about-section .about-first-component .box-containers #box2, main .about-section .about-first-component .box-containers #box3, main .about-section .about-first-component .box-containers #box4 {
+    margin-left: 150px; }
+  main .about-section .about-first-component .box-containers #box3 {
+    margin-top: 100px; }
+  main .contact-section .contact-first-component {
+    padding-left: 100px; }
+  main .contact-section .contact-second-component .input input {
+    margin-right: 0px; }
+  main footer .div-footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    main footer .div-footer .social-icons {
+      margin-top: 20px; } }
+
 @media only screen and (max-width: 576px) {
   main .container {
     padding-left: 5px; }
@@ -799,23 +859,108 @@ main footer {
     width: 450px; }
   main .about-section .about-second-component .stable {
     width: 400px;
-    margin-left: 20px; }
+    margin-left: 60px; }
   main .about-section .about-second-component .second-box .second-box-content {
     width: 450px; }
   main .portfolio-section .portfolio-first-component .container .portfolio-code-image img {
-    width: 500px; }
+    width: 400px; }
+  main .portfolio-section .portfolio-first-component .container .everything-you-need {
+    margin-right: 0; }
+    main .portfolio-section .portfolio-first-component .container .everything-you-need .text {
+      width: 100%; }
   main .portfolio-section .portfolio-second-component .button-get-app a {
     -webkit-transform: translate(-25%, 50%);
     -ms-transform: translate(-25%, 50%);
     transform: translate(-25%, 50%); }
-  main .contact-section .contact-second-component input {
+  main .contact-section .contact-first-component {
+    margin-left: 100px;
+    width: 300px; }
+  main .contact-section .contact-second-component .input input {
     width: 450px; } }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 505px) {
+  main .about-section .about-first-component .box-containers #box1, main .about-section .about-first-component .box-containers #box2, main .about-section .about-first-component .box-containers #box3, main .about-section .about-first-component .box-containers #box4 {
+    margin-left: 100px; }
+  main .about-section .about-first-component .box-containers #box3 {
+    margin-top: 100px; }
+  main .about-section .about-second-component .stable {
+    margin-left: 30px; }
   main .portfolio-section .portfolio-first-component .everything-you-need {
     width: 400px;
     margin-left: 0; }
     main .portfolio-section .portfolio-first-component .everything-you-need p {
       width: 300px; }
+  main .portfolio-section .portfolio-second-component .container .now-available .description {
+    width: auto; }
+  main .portfolio-section .portfolio-second-component .container .now-available .get-it-on {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: 100px; }
+    main .portfolio-section .portfolio-second-component .container .now-available .get-it-on .app-store {
+      margin-bottom: 30px; }
+  main .contact-section .button-get-app {
+    margin-left: 10px; }
+    main .contact-section .button-get-app a {
+      font-size: 12px;
+      width: 300px; }
+  main .contact-section .contact-second-component .description {
+    width: 350px;
+    text-align: center; }
   main .contact-section .contact-second-component input {
     width: 300px; } }
+
+@media only screen and (max-width: 414px) {
+  main .header-section {
+    width: 456px; }
+    main .header-section .flex-section h1 {
+      font-size: 30px;
+      width: 400px; }
+  main .about-section .about-image {
+    width: 456px; }
+  main .about-section .about-first-component .about-phone-image {
+    margin-left: 160px; }
+  main .about-section .about-first-component .box-containers #box1, main .about-section .about-first-component .box-containers #box2, main .about-section .about-first-component .box-containers #box3, main .about-section .about-first-component .box-containers #box4 {
+    margin-left: 100px;
+    margin-right: 0; }
+  main .about-section .about-first-component .box-containers #box3 {
+    margin-top: 100px; }
+  main .about-section .about-second-component .stable {
+    margin-left: 60px;
+    width: 300px; }
+  main .about-section .about-second-component .second-box .second-box-content {
+    margin-left: 50px;
+    width: 350px; }
+  main .portfolio-section {
+    width: 456px; }
+    main .portfolio-section .container .portfolio-first-component .everything-you-need .text {
+      margin-right: 0; }
+  main .contact-section .button-get-app {
+    margin-left: 100px;
+    margin-bottom: 60px; }
+  main .contact-section .contact-first-component {
+    margin-left: 80px; }
+  main .contact-section .contact-second-component {
+    margin-left: 100px; }
+    main .contact-section .contact-second-component .input input {
+      width: 350px; }
+  main footer {
+    width: 456px; } }
+
+@media only screen and (max-width: 300px) {
+  main .about-section .about-first-component .about-phone-image {
+    margin-left: 250px; }
+  main .about-section .about-first-component .box-containers #box1, main .about-section .about-first-component .box-containers #box2, main .about-section .about-first-component .box-containers #box3, main .about-section .about-first-component .box-containers #box4 {
+    margin-left: 180px; }
+  main .about-section .about-second-component .second-box {
+    margin-left: 150px; }
+  main .contact-section .contact-second-component {
+    margin-left: 150px; }
+    main .contact-section .contact-second-component .description {
+      width: 200px; }
+    main .contact-section .contact-second-component .input input {
+      width: 300px; } }
+
+@media only screen and (max-width: 275px) {
+  main .contact-section .button-get-app {
+    margin-left: 200px; } }

@@ -131,6 +131,7 @@ main{
             }
         }
         .about-second-component{
+            height: 600px; 
             @include flex(flex,space-between,flex-start,row);
             margin-top: 250px;
             .stable{
@@ -268,7 +269,8 @@ main{
         @include flex(flex,center,center,column);
         padding:145px 0 85px 0;
         .button-get-app{
-            margin-top: -160px;
+            margin-top: -190px;
+            margin-left: -50px;
             margin-bottom: 130px;
             a{
                 @include font($work-sans-bold,20px,$white);
@@ -369,15 +371,15 @@ main{
         }
         .portfolio-section{
             .portfolio-first-component{
-                .container{
-                    @include flex(flex,center,center,column);
-                    flex-wrap: wrap;
+                .portfolio-code-image{
+                    img{
+                        width: 450px;
+                    }
                 }
             }
             .portfolio-second-component{
                 background-position: top left;
                 .container{
-                    @include flex(flex,center,center,column);
                     .portfolio-phone-image{
                         margin:10px 0 0 0;
                     }
@@ -400,13 +402,18 @@ main{
     main{
         .about-section{
             .about-image{
-                height:3000px ;
+                height:2900px ;
                 top:600px;
             }   
             .about-first-component{
+                .about-phone-image{
+                    margin-top: 20px;
+                    margin-bottom: 50px;
+                    margin-left: 90px;
+                }
                 .box-containers{
                     #box1,#box2,#box3,#box4{
-                        margin-left: 195px;
+                        margin-left: 215px;
                     }
                     #box3{
                         margin-top: 100px;
@@ -414,9 +421,10 @@ main{
                 }
             }
             .about-second-component{
+                height: 1000px;
                 @include flex(flex,center,center,column);
                 .stable{
-                    margin:0 0 0 85px;
+                   margin: 0 auto;  
                     text-align: center;
                 }
                 .second-box{
@@ -425,8 +433,24 @@ main{
             }
         }
         .portfolio-section{
+            .portfolio-first-component{
+                .container{
+                    @include flex(flex,center,center,column);
+                    flex-wrap: wrap;
+                    .portfolio-code-image{
+                        margin-bottom: 0px;
+                    }
+                    .everything-you-need{
+                        margin-top: 30px;
+                        margin-left: 50px;
+                    }
+                }
+               
+                
+            }
             .portfolio-second-component{
                .container{
+                @include flex(flex,center,center,column);
                     .button-get-app{
                         a{
                             margin-left:-120px;
@@ -436,10 +460,17 @@ main{
             }
         }
         .contact-section{
-            padding-left: 200px;
+
             .contact-first-component{
+                padding-left: 200px;    
                 .contact-list:nth-child(3),.contact-list:nth-child(4){
                     margin-top: 20px;
+                }
+            }
+            .contact-second-component{
+
+                .input{
+                    @include flex(flex,center,center,column);
                 }
             }
         }
@@ -448,13 +479,6 @@ main{
 
 @media only screen and (max-width:785px){
     main{
-        .about-section{
-            .about-second-component{
-                .stable{
-                    margin-left: 0;
-                }
-            }
-        }
         .contact-section{
             .contact-second-component{
                 form{
@@ -468,47 +492,42 @@ main{
     }
 }
 
-// @media only screen and (max-width:767px){
-//     main{
-//         .about-section{
-//             .about-image{
-//                 height:3000px ;
-//                 top:600px;
-//             }
-//             .about-first-component{
-//                 .box-containers{
-//                     #box1,#box2,#box3,#box4{
-//                         margin-left: 100px;
-//                     }
-//                     #box3{
-//                         margin-top: 100px
-//                     }
-//                 }
-//             }
-//         }
-//         .portfolio-section{
-//             .portfolio-second-component{
-//                 .button-get-app{
-//                     a{
-//                         transform: translate(0, 50%);
-//                     }
-//                 }
-//             }
-//         }
-//         .contact-section{
-//             .contact-first-component{
-//                 flex-wrap: wrap;
-//                 .contact-list:first-child{
-//                     margin-left: 200px;
-//                 }
-//                 .contact-list:nth-child(2),.contact-list:nth-child(3),.contact-list:nth-child(4){
-//                     margin-left: 200px;
-//                     margin-top: 50px;
-//                 }
-//             }
-//         }
-//     }
-// }
+@media only screen and (max-width:767px){
+    main{
+        .about-section{
+            .about-first-component{
+                .box-containers{
+                    #box1,#box2,#box3,#box4{
+                         margin-left: 150px;
+                    }
+                    #box3{
+                        margin-top: 100px
+                    }
+                }
+            }
+        }
+        .contact-section{
+            .contact-first-component{
+                padding-left: 100px;
+            }
+            .contact-second-component{
+                .input{
+                    input{
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
+        footer{
+            .div-footer{
+                @include flex(flex,center,center,column);
+                .social-icons{
+                    margin-top:20px;
+                }
+            }
+        }
+    }
+}
 @media only screen and (max-width:576px){
     main{
         .container{
@@ -525,12 +544,12 @@ main{
             .about-second-component{
                 .stable{
                     width: 400px;
-                    margin-left: 20px;
+                    margin-left: 60px;
                 }
                 .second-box{
                     .second-box-content{
                         width: 450px;
-                    }
+                    }   
                 }
             }
         }
@@ -539,8 +558,14 @@ main{
                 .container{
                     .portfolio-code-image{
                         img{
-                            width: 500px;
+                            width: 400px;
                         }
+                    }
+                    .everything-you-need{
+                        margin-right: 0;    
+                       .text{
+                           width: 100%;
+                       }
                     }
                 }
             }
@@ -553,16 +578,39 @@ main{
             }
         }
         .contact-section{
+            .contact-first-component{
+                margin-left: 100px;
+                width: 300px;
+            }
             .contact-second-component{
-                input{
-                    width: 450px;
+                .input{
+                   input{
+                        width: 450px;
+                   }
                 }
             }
         }
     }
 }
-@media only screen and (max-width:500px){
+@media only screen and (max-width:505px){
     main{
+       .about-section{
+            .about-first-component{
+                .box-containers{
+                    #box1,#box2,#box3,#box4{
+                        margin-left: 100px;
+                   }
+                   #box3{
+                       margin-top: 100px
+                   }
+                }
+            }
+            .about-second-component{
+                .stable{
+                    margin-left: 30px;
+                }
+            }
+        }
         .portfolio-section{
             .portfolio-first-component{
                 .everything-you-need{
@@ -573,12 +621,160 @@ main{
                     }
                 }
             }
+            .portfolio-second-component{
+                .container{
+                    .now-available{
+                       .description{
+                           width: auto;
+                       }
+                       .get-it-on{
+                           flex-wrap: wrap;
+                           margin-left: 100px;
+                           .app-store{
+                               margin-bottom: 30px;
+                           }
+                       }
+                    }
+                }
+            }
         }   
         .contact-section{
+            .button-get-app{
+                margin-left: 10px;
+                a{
+                    font-size: 12px;
+                    width: 300px;
+                }
+            }
             .contact-second-component{
+                .description{
+                    width: 350px;
+                    text-align: center;
+                }
                 input{
                     width: 300px;
                 }
+            }
+        }
+       
+    }
+}
+@media only screen and (max-width:414px){
+    main{
+        .header-section{
+            width: 456px;
+            .flex-section{
+                h1{
+                    font-size: 30px;
+                    width: 400px;
+                }
+            }
+        }
+        .about-section{
+            .about-image{
+                width: 456px;
+            }
+            .about-first-component{
+                .about-phone-image{
+                    margin-left: 160px;
+                }
+                .box-containers{
+                    #box1,#box2,#box3,#box4{
+                        margin-left: 100px;
+                        margin-right: 0;
+                   }
+                   #box3{
+                       margin-top: 100px
+                   }
+                }
+            }
+            .about-second-component{
+                .stable{
+                    margin-left: 60px;
+                    width: 300px;
+                }
+                .second-box{
+                    .second-box-content{
+                        margin-left: 50px;
+                        width: 350px;
+                    }
+                }
+            }
+        }
+        .portfolio-section{
+            width: 456px;
+            .container{
+                .portfolio-first-component{
+                    .everything-you-need{
+                        .text{
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .contact-section{
+            .button-get-app{
+                margin-left: 100px;
+                margin-bottom: 60px;
+            }
+            .contact-first-component{
+                margin-left: 80px;
+            }
+            .contact-second-component{
+                margin-left: 100px;
+                .input{
+                    input{
+                        width: 350px;
+                    }
+                }
+            }
+        }
+        footer{
+            width: 456px;
+        }
+    }
+}
+@media only screen and (max-width:300px){
+    main{
+        .about-section{
+            .about-first-component{
+                .about-phone-image{
+                    margin-left: 250px;
+                }
+                .box-containers{
+                    #box1,#box2,#box3,#box4{
+                        margin-left: 180px;
+                    }
+                }
+            }
+            .about-second-component{
+                .second-box{
+                    margin-left: 150px;
+                }
+            }
+        }
+        .contact-section{
+
+            .contact-second-component{
+                margin-left: 150px;
+                .description{
+                    width: 200px;
+                }
+                .input{
+                    input{
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:275px){
+    main{
+        .contact-section{
+            .button-get-app{
+                margin-left: 200px;
             }
         }
     }
